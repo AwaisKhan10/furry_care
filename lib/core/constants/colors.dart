@@ -8,6 +8,7 @@ const Color accentColor = Color(0xffFDF6F0);
 const Color textFieldFillColor = Color(0xffF2F2F2);
 const Color blackColor = Color(0xFF000000);
 const Color whiteColor = Color(0xFFFFFFFF);
+const Color greyColor = Color(0xFFC6BFBA);
 const Color borderColor = Color(0xFF56423D);
 
 const Color buttonColor = borderColor;
