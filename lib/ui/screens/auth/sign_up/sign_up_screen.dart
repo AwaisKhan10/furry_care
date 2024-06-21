@@ -1,6 +1,7 @@
+// ignore_for_file: use_key_in_widget_constructors, unnecessary_new
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 import 'package:furry_care/core/constants/app_assets.dart';
 import 'package:furry_care/core/constants/colors.dart';
 import 'package:furry_care/core/constants/strings.dart';
@@ -66,247 +67,262 @@ class SignUpScreen extends StatelessWidget {
                         child: Stack(
                           alignment: Alignment.topRight,
                           children: [
+                            // Padding(
+                            //   padding:
+                            //       const EdgeInsets.symmetric(vertical: 5.0),
+                            //   child: Stack(
+                            //     alignment: Alignment.topCenter,
+                            //     children: [
+                            //       Image.asset(
+                            //         "$staticAsset/sign_up.png",
+                            //       ),
+
+                            //       ///
+                            //       /// Text Fields
+                            //     ],
+                            //   ),
+                            // ),
+
                             Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(vertical: 5.0),
-                              child: Stack(
-                                alignment: Alignment.topCenter,
-                                children: [
-                                  Image.asset(
-                                    "$staticAsset/sign_up.png",
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        vertical: 30.0, horizontal: 20),
-                                    child: Align(
-                                      alignment: Alignment.topLeft,
-                                      child: Text("Sign Up",
-                                          style: style16.copyWith(
-                                              color: blackColor)),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(20.0),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        SizedBox(
-                                          height: 115.h,
+                              padding: const EdgeInsets.only(top: 10.0),
+                              child: ClipPath(
+                                clipper: Clip1Clipper(),
+                                child: Container(
+                                  padding: const EdgeInsets.all(20),
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                      color: accentColor,
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: blackColor.withOpacity(0.25),
+                                            offset: const Offset(0, 4),
+                                            blurRadius: 4.0,
+                                            spreadRadius: 0.1),
+                                      ]),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(top: 40.0),
+                                        child: Align(
+                                          alignment: Alignment.topLeft,
+                                          child: Text("Sign Up",
+                                              style: style16.copyWith(
+                                                  color: blackColor)),
                                         ),
+                                      ),
+                                      SizedBox(
+                                        height: 60.h,
+                                      ),
 
-                                        ///
-                                        /// Name|:name
-                                        ///
+                                      ///
+                                      /// Name|:name
+                                      ///
 
-                                        TextFormField(
-                                          cursorColor: primaryColor,
-                                          style: const TextStyle(
-                                              color: blackColor),
-                                          inputFormatters: <TextInputFormatter>[
-                                            FilteringTextInputFormatter.allow(
-                                                RegExp("[a-z_0-9]")),
-                                          ],
-                                          autovalidateMode: AutovalidateMode
-                                              .onUserInteraction,
-                                          validator: (val) {
-                                            if (val!.trim().isEmpty) {
-                                              return "Please enter Name";
-                                            } else {
-                                              return null;
-                                            }
-                                          },
-                                          // controller: model.passwordController,
-                                          onChanged: (val) {
-                                            // model.signUpBody.username = val.trim();
-                                          },
-                                          decoration: authFieldDecoration
-                                              .copyWith(hintText: "Name"),
-                                        ),
-
-                                        SizedBox(height: 15.h),
-
-                                        ///
-                                        /// Email Address
-                                        ///
-
-                                        TextFormField(
-                                          autovalidateMode: AutovalidateMode
-                                              .onUserInteraction,
-                                          validator: (val) {
-                                            if (!val!.isEmail) {
-                                              return "Please enter email";
-                                            }
+                                      TextFormField(
+                                        cursorColor: primaryColor,
+                                        style:
+                                            const TextStyle(color: blackColor),
+                                        inputFormatters: <TextInputFormatter>[
+                                          FilteringTextInputFormatter.allow(
+                                              RegExp("[a-z_0-9]")),
+                                        ],
+                                        autovalidateMode:
+                                            AutovalidateMode.onUserInteraction,
+                                        validator: (val) {
+                                          if (val!.trim().isEmpty) {
+                                            return "Please enter Name";
+                                          } else {
                                             return null;
-                                          },
-                                          onChanged: (val) {
-                                            // model.signUpBody.email = val.trim();
-                                          },
-                                          keyboardType:
-                                              TextInputType.emailAddress,
-                                          decoration: authFieldDecoration
-                                              .copyWith(hintText: "Email ID"),
-                                        ),
-                                        SizedBox(height: 15.h),
+                                          }
+                                        },
+                                        // controller: model.passwordController,
+                                        onChanged: (val) {
+                                          // model.signUpBody.username = val.trim();
+                                        },
+                                        decoration: authFieldDecoration
+                                            .copyWith(hintText: "Name"),
+                                      ),
 
-                                        ///
-                                        /// Password
-                                        ///
+                                      SizedBox(height: 15.h),
 
-                                        TextFormField(
-                                          inputFormatters: [
-                                            // FilteringTextInputFormatter.allow(r"\s\b|\b\s"),
-                                            FilteringTextInputFormatter.deny(
-                                                RegExp(r"\s\b|\b\s")),
-                                          ],
-                                          autovalidateMode: AutovalidateMode
-                                              .onUserInteraction,
-                                          validator: (val) {
-                                            if (val!.trim().isEmpty) {
-                                              return "Please enter password";
-                                            } else if (val.trim().length < 7) {
-                                              return "Password length must be greater than 7 characters";
-                                            } else {
-                                              return null;
-                                            }
-                                          },
-                                          keyboardType:
-                                              TextInputType.visiblePassword,
-                                          obscureText:
-                                              model.passswordVisibilty == true
-                                                  ? true
-                                                  : false,
+                                      ///
+                                      /// Email Address
+                                      ///
 
-                                          // controller: model.passwordController,
-                                          onChanged: (val) {
-                                            // model.signUpBody.password = val.trim();
-                                          },
-                                          decoration:
-                                              authFieldDecoration.copyWith(
-                                            hintText: "Password",
-                                            suffixIcon: GestureDetector(
-                                              onTap: () {
-                                                model
-                                                    .togglePasswordVisibility();
-                                              },
-                                              child: Icon(
-                                                model.passswordVisibilty ==
-                                                        false
-                                                    ? Icons.visibility
-                                                    : Icons.visibility_off,
-                                                size: 18,
-                                                // color: KTextColor2,
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 15.h,
-                                        ),
+                                      TextFormField(
+                                        autovalidateMode:
+                                            AutovalidateMode.onUserInteraction,
+                                        validator: (val) {
+                                          if (!val!.isEmail) {
+                                            return "Please enter email";
+                                          }
+                                          return null;
+                                        },
+                                        onChanged: (val) {
+                                          // model.signUpBody.email = val.trim();
+                                        },
+                                        keyboardType:
+                                            TextInputType.emailAddress,
+                                        decoration: authFieldDecoration
+                                            .copyWith(hintText: "Email ID"),
+                                      ),
+                                      SizedBox(height: 15.h),
 
-                                        ///
-                                        /// Re - ENTER password
-                                        ///
-                                        TextFormField(
-                                          inputFormatters: [
-                                            // FilteringTextInputFormatter.allow(r"\s\b|\b\s"),
-                                            FilteringTextInputFormatter.deny(
-                                                RegExp(r"\s\b|\b\s")),
-                                          ],
-                                          autovalidateMode: AutovalidateMode
-                                              .onUserInteraction,
-                                          validator: (val) {
-                                            if (val!.trim().isEmpty) {
-                                              return "Please Re enter password";
-                                            } else if (val.trim().length < 7) {
-                                              return "Password length must be greater than 7 characters";
-                                            } else {
-                                              return null;
-                                            }
-                                          },
-                                          keyboardType:
-                                              TextInputType.visiblePassword,
-                                          obscureText:
-                                              model.passswordVisibilty1 == true
-                                                  ? true
-                                                  : false,
+                                      ///
+                                      /// Password
+                                      ///
 
-                                          // controller: model.passwordController,
-                                          onChanged: (val) {
-                                            // model.signUpBody.password = val.trim();
-                                          },
-                                          decoration:
-                                              authFieldDecoration.copyWith(
-                                            hintText: "Re enter password",
-                                            suffixIcon: GestureDetector(
-                                              onTap: () {
-                                                model
-                                                    .togglePasswordVisibility1();
-                                              },
-                                              child: Icon(
-                                                model.passswordVisibilty1 ==
-                                                        false
-                                                    ? Icons.visibility
-                                                    : Icons.visibility_off,
-                                                size: 18,
-                                                // color: KTextColor2,
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 15.h,
-                                        ),
+                                      TextFormField(
+                                        inputFormatters: [
+                                          // FilteringTextInputFormatter.allow(r"\s\b|\b\s"),
+                                          FilteringTextInputFormatter.deny(
+                                              RegExp(r"\s\b|\b\s")),
+                                        ],
+                                        autovalidateMode:
+                                            AutovalidateMode.onUserInteraction,
+                                        validator: (val) {
+                                          if (val!.trim().isEmpty) {
+                                            return "Please enter password";
+                                          } else if (val.trim().length < 7) {
+                                            return "Password length must be greater than 7 characters";
+                                          } else {
+                                            return null;
+                                          }
+                                        },
+                                        keyboardType:
+                                            TextInputType.visiblePassword,
+                                        obscureText:
+                                            model.passswordVisibilty == true
+                                                ? true
+                                                : false,
 
-                                        TextFormField(
-                                          cursorColor: primaryColor,
-                                          style: const TextStyle(
-                                              color: blackColor),
-                                          inputFormatters: <TextInputFormatter>[
-                                            FilteringTextInputFormatter.allow(
-                                                RegExp("[a-z_0-9]")),
-                                          ],
-                                          autovalidateMode: AutovalidateMode
-                                              .onUserInteraction,
-                                          validator: (val) {
-                                            if (val!.trim().isEmpty) {
-                                              return "Please enter Mobile No";
-                                            } else {
-                                              return null;
-                                            }
-                                          },
-                                          // controller: model.passwordController,
-                                          onChanged: (val) {
-                                            // model.signUpBody.username = val.trim();
-                                          },
-                                          decoration: authFieldDecoration
-                                              .copyWith(hintText: "Mobile No"),
-                                        ),
-                                        SizedBox(
-                                          height: 25.h,
-                                        ),
-
-                                        ///
-                                        /// Register Button for the new account
-                                        ///
-                                        CustomButton(
-                                            text: "Register",
+                                        // controller: model.passwordController,
+                                        onChanged: (val) {
+                                          // model.signUpBody.password = val.trim();
+                                        },
+                                        decoration:
+                                            authFieldDecoration.copyWith(
+                                          hintText: "Password",
+                                          suffixIcon: GestureDetector(
                                             onTap: () {
-                                              FocusScope.of(context).unfocus();
-                                              if (_formKey.currentState!
-                                                  .validate()) {
-                                                // model.signUp(context);
-                                                Get.offAll(RootScreen());
-                                              }
+                                              model.togglePasswordVisibility();
                                             },
-                                            buttonColor: borderColor,
-                                            textColor: primaryColor)
-                                      ],
-                                    ),
+                                            child: Icon(
+                                              model.passswordVisibilty == false
+                                                  ? Icons.visibility
+                                                  : Icons.visibility_off,
+                                              size: 18,
+                                              // color: KTextColor2,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 15.h,
+                                      ),
+
+                                      ///
+                                      /// Re - ENTER password
+                                      ///
+                                      TextFormField(
+                                        inputFormatters: [
+                                          // FilteringTextInputFormatter.allow(r"\s\b|\b\s"),
+                                          FilteringTextInputFormatter.deny(
+                                              RegExp(r"\s\b|\b\s")),
+                                        ],
+                                        autovalidateMode:
+                                            AutovalidateMode.onUserInteraction,
+                                        validator: (val) {
+                                          if (val!.trim().isEmpty) {
+                                            return "Please Re enter password";
+                                          } else if (val.trim().length < 7) {
+                                            return "Password length must be greater than 7 characters";
+                                          } else {
+                                            return null;
+                                          }
+                                        },
+                                        keyboardType:
+                                            TextInputType.visiblePassword,
+                                        obscureText:
+                                            model.passswordVisibilty1 == true
+                                                ? true
+                                                : false,
+
+                                        // controller: model.passwordController,
+                                        onChanged: (val) {
+                                          // model.signUpBody.password = val.trim();
+                                        },
+                                        decoration:
+                                            authFieldDecoration.copyWith(
+                                          hintText: "Re enter password",
+                                          suffixIcon: GestureDetector(
+                                            onTap: () {
+                                              model.togglePasswordVisibility1();
+                                            },
+                                            child: Icon(
+                                              model.passswordVisibilty1 == false
+                                                  ? Icons.visibility
+                                                  : Icons.visibility_off,
+                                              size: 18,
+                                              // color: KTextColor2,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 15.h,
+                                      ),
+
+                                      TextFormField(
+                                        cursorColor: primaryColor,
+                                        style:
+                                            const TextStyle(color: blackColor),
+                                        inputFormatters: <TextInputFormatter>[
+                                          FilteringTextInputFormatter.allow(
+                                              RegExp("[a-z_0-9]")),
+                                        ],
+                                        autovalidateMode:
+                                            AutovalidateMode.onUserInteraction,
+                                        validator: (val) {
+                                          if (val!.trim().isEmpty) {
+                                            return "Please enter Mobile No";
+                                          } else {
+                                            return null;
+                                          }
+                                        },
+                                        // controller: model.passwordController,
+                                        onChanged: (val) {
+                                          // model.signUpBody.username = val.trim();
+                                        },
+                                        decoration: authFieldDecoration
+                                            .copyWith(hintText: "Mobile No"),
+                                      ),
+                                      SizedBox(
+                                        height: 25.h,
+                                      ),
+
+                                      ///
+                                      /// Register Button for the new account
+                                      ///
+                                      CustomButton(
+                                          text: "Register",
+                                          onTap: () {
+                                            FocusScope.of(context).unfocus();
+                                            if (_formKey.currentState!
+                                                .validate()) {
+                                              // model.signUp(context);
+                                              Get.offAll(RootScreen());
+                                            }
+                                          },
+                                          buttonColor: borderColor,
+                                          textColor: primaryColor)
+                                    ],
                                   ),
-                                ],
+                                ),
                               ),
                             ),
                             GestureDetector(
@@ -317,8 +333,8 @@ class SignUpScreen extends StatelessWidget {
                                 alignment: Alignment.centerRight,
                                 children: [
                                   Image.asset(
-                                    "$staticAsset/login1.png",
-                                    scale: 1,
+                                    "$staticAsset/login2.png",
+                                    scale: 3.3,
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.only(
@@ -330,6 +346,9 @@ class SignUpScreen extends StatelessWidget {
                             ),
                           ],
                         ),
+                      ),
+                      SizedBox(
+                        height: 20.h,
                       ),
 
                       ///
@@ -378,5 +397,46 @@ class SignUpScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class Clip1Clipper extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    Path path = Path();
+
+    // Define the radius for the corners
+    double cornerRadius = 20.0;
+
+    // Start from the top left corner with a slight inward curve
+    path.moveTo(0, cornerRadius);
+    path.quadraticBezierTo(0, 0, cornerRadius, 0);
+
+    // Draw a slight horizontal line to the right after the curve
+    path.lineTo(size.width * 0.15, 0);
+
+    // Draw a diagonal line to the slanted top right corner
+    path.lineTo(size.width, 145.h);
+
+    // Draw a line to the bottom right corner with a slight inward curve
+    path.lineTo(size.width, size.height - cornerRadius);
+    path.quadraticBezierTo(
+        size.width, size.height, size.width - cornerRadius, size.height);
+
+    // Draw a line to the bottom left corner with a slight inward curve
+    path.lineTo(cornerRadius, size.height);
+    path.quadraticBezierTo(0, size.height, 0, size.height - cornerRadius);
+
+    // Close the path to form the shape
+    path.close();
+
+    return path;
+  }
+
+  @override
+  bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
+    // Since the clipping is based on a fixed path, we return false
+    // to indicate that re-clipping is not necessary.
+    return false;
   }
 }

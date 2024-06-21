@@ -10,6 +10,7 @@ class AppAssets {
   ///
   /// logo
   ///
+  static String splash_logo = "$staticAsset/logo.png";
   static String furry_care_logo = "$staticAsset/furry_care_logo.png";
 
   static String google = "$staticAsset/google.png";
