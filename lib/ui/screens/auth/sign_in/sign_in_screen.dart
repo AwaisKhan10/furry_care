@@ -23,6 +23,7 @@ class SignInScreen extends StatelessWidget {
       create: (context) => SignInViewModel(),
       child: Consumer<SignInViewModel>(
         builder: (context, model, child) => Scaffold(
+          backgroundColor: primaryColor,
           key: _scaffoldkey,
 
           ///

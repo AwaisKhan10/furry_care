@@ -7,6 +7,7 @@ import 'package:furry_care/ui/custom_widgets/buttons/custom_button.dart';
 import 'package:furry_care/ui/screens/auth/sign_in/sign_in_screen.dart';
 import 'package:furry_care/ui/screens/auth/sign_in/sign_view_model.dart';
 import 'package:furry_care/ui/screens/auth/sign_up/sign_up_screen.dart';
+import 'package:furry_care/ui/screens/root/root_screen.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
@@ -17,6 +18,8 @@ class WelcomeScreen extends StatelessWidget {
       create: (context) => SignInViewModel(),
       child: Consumer<SignInViewModel>(
         builder: (context, model, child) => Scaffold(
+          backgroundColor: primaryColor,
+
           ///
           /// Start Body
           ///
@@ -60,13 +63,18 @@ class WelcomeScreen extends StatelessWidget {
                 SizedBox(
                   height: 20.h,
                 ),
-                Text(
-                  "Skip",
-                  style: style16.copyWith(
-                      decoration: TextDecoration.underline,
-                      fontSize: 20.sp,
-                      color: buttonColor,
-                      decorationColor: buttonColor),
+                InkWell(
+                  onTap: () {
+                    Get.offAll(RootScreen());
+                  },
+                  child: Text(
+                    "Skip",
+                    style: style16.copyWith(
+                        decoration: TextDecoration.underline,
+                        fontSize: 20.sp,
+                        color: buttonColor,
+                        decorationColor: buttonColor),
+                  ),
                 ),
               ],
             ),

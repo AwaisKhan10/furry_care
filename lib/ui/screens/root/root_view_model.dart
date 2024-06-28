@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:furry_care/core/enums/view_state.dart';
 import 'package:furry_care/core/view_model/base_view_model.dart';
+import 'package:furry_care/ui/screens/ask/chat_screen.dart';
 import 'package:furry_care/ui/screens/home/home_screen.dart';
+import 'package:furry_care/ui/screens/shop/shop_screen.dart';
+import 'package:furry_care/ui/screens/volunteer/volunteer_screen.dart';
 
 class RootViewModel extends BaseViewModel {
   final PageController pageController = PageController(initialPage: 0);
@@ -14,12 +17,9 @@ class RootViewModel extends BaseViewModel {
 
   List<Widget> allScreen = [
     HomeScreen(),
-    HomeScreen(),
-    HomeScreen(),
-    HomeScreen(),
-    HomeScreen(),
-    // ExploreScreen(),
-    // ProfileScreen(),
+    ShopScreen(),
+    VolunteerScreen(),
+    ChatScreen(),
   ];
 
   updatedScreen(int index) {

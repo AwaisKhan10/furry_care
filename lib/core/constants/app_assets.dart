@@ -18,17 +18,47 @@ class AppAssets {
   static String twitter = "$staticAsset/twitter.png";
 
   ///
-  /// Bottom Bar for the Root Screen
+  /// *************** Icons Assets *****************
   ///
 
-  static String home = "$iconsAssets/home.png";
-  static String home1 = "$iconsAssets/home1.png";
-  static String services = "$iconsAssets/services.png";
-  static String services1 = "$iconsAssets/services1.png";
-  static String add = "$iconsAssets/add.png";
-  static String add1 = "$iconsAssets/add1.png";
-  static String ask = "$iconsAssets/ask.png";
-  static String ask1 = "$iconsAssets/ask1.png";
-  static String profile = "$iconsAssets/profile.png";
-  static String profile1 = "$iconsAssets/profile1.png";
+  ///
+  /// Bottom Bar for the Root Screen Icons
+  ///
+
+  static String feed = "$iconsAssets/feed.png";
+  static String feed1 = "$iconsAssets/feed1.png";
+  static String shop = "$iconsAssets/shop.png";
+  static String shop1 = "$iconsAssets/shop1.png";
+  static String chat = "$iconsAssets/chat.png";
+  static String volunteer = "$iconsAssets/volunteer.png";
+  static String volunteer1 = "$iconsAssets/volunteer1.png";
+  static String menu_icon = "$iconsAssets/menu_icon.png";
+
+  ///
+  /// Home Screen
+  ///
+  static String notifications = "$iconsAssets/notifications.png";
+  static String like = "$iconsAssets/like.png";
+  static String comment = "$iconsAssets/comment.png";
+  static String share = "$iconsAssets/share.png";
+
+  ///
+  ///
+  ///
+  ///
+  ///
+  ///
+  /// *************** Dynamic Assets From Databse Come this Images *****************
+  ///
+  ///
+  ///
+  ///
+  ///
+  ///
+  ///
+
+  static String user1 = "$dynamicAsset/user1.png";
+  static String user2 = "$dynamicAsset/user2.png";
+  static String img1 = "$dynamicAsset/img1.png";
+  static String img2 = "$dynamicAsset/img2.png";
 }

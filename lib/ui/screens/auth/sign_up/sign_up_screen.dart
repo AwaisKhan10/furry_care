@@ -25,6 +25,7 @@ class SignUpScreen extends StatelessWidget {
       create: (context) => SignUpViewModel(),
       child: Consumer<SignUpViewModel>(
         builder: (context, model, child) => Scaffold(
+          backgroundColor: primaryColor,
           key: _scaffoldkey,
 
           ///

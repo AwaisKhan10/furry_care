@@ -1,7 +1,8 @@
+// ignore_for_file: use_super_parameters
+
 import 'package:flutter/material.dart';
 import 'package:furry_care/core/constants/app_assets.dart';
 import 'package:furry_care/core/constants/colors.dart';
-import 'package:furry_care/ui/screens/auth/sign_up/sign_up_screen.dart';
 import 'package:furry_care/ui/screens/welcome_screen.dart';
 import 'package:get/get.dart';
 
@@ -27,7 +28,6 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: blackColor,
       body: Container(
         height: Get.height,
         width: Get.width,

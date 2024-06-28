@@ -12,8 +12,19 @@ const Color greyColor = Color(0xFFC6BFBA);
 const Color borderColor = Color(0xFF56423D);
 
 const Color buttonColor = borderColor;
+const Color rootColor = borderColor;
+const Color homescreenBoxColor = textFieldFillColor;
 
 const Gradient gradientColor = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     colors: [primaryColor, secondaryColor]);
+
+final Decoration HomeSceenContainerdecoration =
+    BoxDecoration(color: homescreenBoxColor, boxShadow: [
+  BoxShadow(
+      color: blackColor.withOpacity(0.10),
+      offset: const Offset(0, 2),
+      blurRadius: 10,
+      spreadRadius: 0)
+]);

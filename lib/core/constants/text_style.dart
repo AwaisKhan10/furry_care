@@ -8,3 +8,27 @@ TextStyle style16 = TextStyle(
     fontFamily: poppins,
     color: whiteColor,
     fontWeight: FontWeight.w700);
+
+TextStyle styleNormal16 = TextStyle(
+    fontSize: 16.sp,
+    fontFamily: poppins,
+    color: blackColor,
+    fontWeight: FontWeight.w500);
+
+TextStyle style14 = TextStyle(
+    fontSize: 14.sp,
+    fontFamily: poppins,
+    color: blackColor,
+    fontWeight: FontWeight.w500);
+
+TextStyle style12 = TextStyle(
+    fontSize: 12.sp,
+    fontFamily: poppins,
+    color: blackColor,
+    fontWeight: FontWeight.w400);
+
+TextStyle style10 = TextStyle(
+    fontSize: 10.sp,
+    fontFamily: poppins,
+    color: blackColor,
+    fontWeight: FontWeight.w400);
