@@ -1,7 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:furry_care/core/constants/colors.dart';
 import 'package:furry_care/core/other/screen_utils.dart';
 import 'package:furry_care/firebase_option.dart';
 import 'package:furry_care/locator.dart';

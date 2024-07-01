@@ -1,5 +1,4 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
@@ -34,15 +33,6 @@ class NotificationsService {
     try {
       print("@initFCMConfigure/started");
       // await initFlutterLocalNotificationPlugin();
-      NotificationSettings settings = await fcm.requestPermission(
-        alert: true,
-        announcement: false,
-        badge: true,
-        carPlay: false,
-        criticalAlert: false,
-        provisional: false,
-        sound: true,
-      );
       _moveToTheRespectiveScreen() {
         // Get.to(() => NotificationScreen(
         //     notificationType: notifications.notificationType));
@@ -59,7 +49,7 @@ class NotificationsService {
             'notification.title!',
             'notification.content!',
             backgroundColor: Colors.white,
-            duration: Duration(seconds: 4),
+            duration: const Duration(seconds: 4),
             onTap: (data) {
               // _moveToTheRespectiveScreen(notification);
             },
@@ -73,7 +63,6 @@ class NotificationsService {
       /// [onMessage] callback is called when the app is in foreground.
       ///
       FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-        final data = message.data;
         debugPrint('Got a new notification in the foreground now');
         debugPrint('@OnMessage==> Message: $message');
         debugPrint('@OnMessage==> Data: ${message.data}');
@@ -81,9 +70,7 @@ class NotificationsService {
         // RemoteNotification notification = message.notification!;
         // AndroidNotification android = message.notification!.android!;
         // hostUserId = message.data['hostUserId'].toString();
-        if (message.data != null) {
-          _handleNotification(message, true);
-        }
+        _handleNotification(message, true);
         // if (!kIsWeb && notification != null && android != null) {
         //   Get.dialog(
         //     AlertDialog(

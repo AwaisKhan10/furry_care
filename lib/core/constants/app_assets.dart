@@ -37,6 +37,7 @@ class AppAssets {
   static String volunteer = "$iconsAssets/volunteer.png";
   static String volunteer1 = "$iconsAssets/volunteer1.png";
   static String menu_icon = "$iconsAssets/menu_icon.png";
+  static String add = "$iconsAssets/add.png";
 
   ///
   /// Home Screen

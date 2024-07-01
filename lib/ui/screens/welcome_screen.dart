@@ -12,6 +12,8 @@ import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
 class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(

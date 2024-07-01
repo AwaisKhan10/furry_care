@@ -13,7 +13,7 @@ class ShopDetailScreen extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => ShopDetailViewModel(),
       child: Consumer<ShopDetailViewModel>(
-        builder: (context, model, child) => Scaffold(
+        builder: (context, model, child) => const Scaffold(
           ///
           /// Start Body
           ///

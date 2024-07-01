@@ -3,11 +3,12 @@ import 'package:furry_care/core/constants/app_assets.dart';
 import 'package:furry_care/core/constants/colors.dart';
 import 'package:furry_care/core/constants/text_style.dart';
 import 'package:furry_care/core/other/screen_utils.dart';
-import 'package:furry_care/ui/screens/shop/shop_details/details_screen.dart';
 import 'package:furry_care/ui/screens/shop/shop_view_model.dart';
 import 'package:provider/provider.dart';
 
 class ShopScreen extends StatelessWidget {
+  const ShopScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(

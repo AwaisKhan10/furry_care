@@ -15,7 +15,9 @@ import 'package:provider/provider.dart';
 
 class SignInScreen extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
-  final GlobalKey<ScaffoldState> _scaffoldkey = new GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _scaffoldkey = GlobalKey<ScaffoldState>();
+
+  SignInScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

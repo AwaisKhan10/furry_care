@@ -6,6 +6,8 @@ import 'package:shimmer/shimmer.dart';
 /// Adjust In Your Project these shimmer loading settings
 ///
 class GridViewShimmer extends StatelessWidget {
+  const GridViewShimmer({super.key});
+
   // GridViewShimmer({required this.itemCount});
   @override
   Widget build(BuildContext context) {

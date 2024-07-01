@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furry_care/core/constants/app_assets.dart';
 import 'package:furry_care/core/constants/colors.dart';
-import 'package:furry_care/core/other/screen_utils.dart';
 import 'package:furry_care/ui/custom_widgets/custom_bottom_navigator_bar.dart';
 import 'package:furry_care/ui/screens/menu/menu_screen.dart';
 import 'package:furry_care/ui/screens/root/root_view_model.dart';
@@ -11,7 +10,7 @@ class RootScreen extends StatelessWidget {
   final int? selectedScreen;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
-  RootScreen({Key? key, this.selectedScreen = 0}) : super(key: key);
+  RootScreen({super.key, this.selectedScreen = 0});
 
   @override
   Widget build(BuildContext context) {

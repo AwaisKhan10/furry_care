@@ -19,7 +19,7 @@ TextStyle style14 = TextStyle(
     fontSize: 14.sp,
     fontFamily: poppins,
     color: blackColor,
-    fontWeight: FontWeight.w500);
+    fontWeight: FontWeight.w600);
 
 TextStyle style12 = TextStyle(
     fontSize: 12.sp,

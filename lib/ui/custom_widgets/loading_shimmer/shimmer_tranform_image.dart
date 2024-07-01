@@ -7,6 +7,8 @@ import 'package:shimmer/shimmer.dart';
 /// Adjust In Your Project these shimmer loading settings
 ///
 class ListTranformImageShimmer extends StatelessWidget {
+  const ListTranformImageShimmer({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Shimmer.fromColors(
