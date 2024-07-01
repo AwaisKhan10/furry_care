@@ -8,9 +8,20 @@ TextStyle style16 = TextStyle(
     fontFamily: poppins,
     color: whiteColor,
     fontWeight: FontWeight.w700);
+TextStyle style16b = TextStyle(
+    fontSize: 16.sp,
+    fontFamily: poppins,
+    color: blackColor,
+    fontWeight: FontWeight.w700);
 
 TextStyle styleNormal16 = TextStyle(
     fontSize: 16.sp,
+    fontFamily: poppins,
+    color: blackColor,
+    fontWeight: FontWeight.w500);
+
+TextStyle styleNormal14 = TextStyle(
+    fontSize: 14.sp,
     fontFamily: poppins,
     color: blackColor,
     fontWeight: FontWeight.w500);
@@ -19,13 +30,13 @@ TextStyle style14 = TextStyle(
     fontSize: 14.sp,
     fontFamily: poppins,
     color: blackColor,
-    fontWeight: FontWeight.w500);
+    fontWeight: FontWeight.w700);
 
 TextStyle style12 = TextStyle(
     fontSize: 12.sp,
     fontFamily: poppins,
     color: blackColor,
-    fontWeight: FontWeight.w400);
+    fontWeight: FontWeight.w500);
 
 TextStyle style10 = TextStyle(
     fontSize: 10.sp,

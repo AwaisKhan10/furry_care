@@ -43,6 +43,15 @@ class AppAssets {
   static String share = "$iconsAssets/share.png";
 
   ///
+  ///Shop Screen
+  ///
+  static String img01 = "$dynamicAsset/shop_images/img1.png";
+  static String img02 = "$dynamicAsset/shop_images/img2.png";
+  static String img03 = "$dynamicAsset/shop_images/img3.png";
+  static String imgp1 = "$dynamicAsset/shop_images/imgp1.png";
+  static String imgp2 = "$dynamicAsset/shop_images/imgp2.png";
+
+  ///
   ///
   ///
   ///
