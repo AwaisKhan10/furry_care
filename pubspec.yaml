@@ -54,7 +54,10 @@ dependencies:
   file_picker:
   shimmer:
   carousel_slider: ^4.2.1
-  custom_rating_bar: ^2.0.5
+  # custom_rating_bar: ^2.0.5
+  smooth_page_indicator: ^1.1.0
+  flutter_rating_bar:
+  simple_progress_indicators:
   # device_info: ^2.0.2
   # logger: ^1.0.0
   # rxdart: ^0.27.1

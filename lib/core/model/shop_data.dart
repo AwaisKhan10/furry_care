@@ -5,6 +5,7 @@ class ShopData {
   String? price;
   String? description;
   String? rating;
+  String? subrating;
 
   ShopData(
       {this.id,
@@ -12,5 +13,6 @@ class ShopData {
       this.title,
       this.price,
       this.description,
-      this.rating});
+      this.rating,
+      this.subrating});
 }
