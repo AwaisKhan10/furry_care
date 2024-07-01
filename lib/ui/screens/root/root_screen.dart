@@ -3,6 +3,7 @@ import 'package:furry_care/core/constants/app_assets.dart';
 import 'package:furry_care/core/constants/colors.dart';
 import 'package:furry_care/core/other/screen_utils.dart';
 import 'package:furry_care/ui/custom_widgets/custom_bottom_navigator_bar.dart';
+import 'package:furry_care/ui/screens/menu/menu_screen.dart';
 import 'package:furry_care/ui/screens/root/root_view_model.dart';
 import 'package:provider/provider.dart';
 
@@ -35,41 +36,6 @@ class RootScreen extends StatelessWidget {
           /// Right Drawer
           ///
           endDrawer: buildDrawer(context),
-        ),
-      ),
-    );
-  }
-
-  Widget buildDrawer(BuildContext context) {
-    return Drawer(
-      backgroundColor: accentColor,
-      child: Container(
-        padding: const EdgeInsets.all(20),
-        decoration: BoxDecoration(
-            color: accentColor,
-            borderRadius: BorderRadius.only(topLeft: Radius.circular(40.r))),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 40.0),
-              child: CircleAvatar(
-                radius: 50.r,
-                backgroundImage: AssetImage(
-                  AppAssets.user2,
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 40.0),
-              child: CircleAvatar(
-                radius: 50.r,
-                backgroundImage: AssetImage(
-                  AppAssets.user2,
-                ),
-              ),
-            ),
-          ],
         ),
       ),
     );

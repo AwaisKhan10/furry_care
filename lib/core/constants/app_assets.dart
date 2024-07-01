@@ -4,7 +4,9 @@ import 'package:furry_care/core/constants/strings.dart';
 
 class AppAssets {
   ///
+  ///************************************************ */
   /// *************** Static Assets *****************
+  ///************************************************** */
   ///
 
   ///
@@ -18,7 +20,9 @@ class AppAssets {
   static String twitter = "$staticAsset/twitter.png";
 
   ///
+  ///*********************************************** */
   /// *************** Icons Assets *****************
+  ///*********************************************** */
   ///
 
   ///
@@ -43,17 +47,19 @@ class AppAssets {
   static String share = "$iconsAssets/share.png";
 
   ///
+  /// Home Screen
+  ///
+  static String profile = "$iconsAssets/profile.png";
+  static String courses = "$iconsAssets/courses.png";
+  static String blogs = "$iconsAssets/blogs.png";
+  static String challenges = "$iconsAssets/challenges.png";
+
   ///
   ///
   ///
-  ///
-  ///
+  ///****************************************************************************** */
   /// *************** Dynamic Assets From Databse Come this Images *****************
-  ///
-  ///
-  ///
-  ///
-  ///
+  ///******************************************************************************** */
   ///
   ///
 
@@ -61,4 +67,8 @@ class AppAssets {
   static String user2 = "$dynamicAsset/user2.png";
   static String img1 = "$dynamicAsset/img1.png";
   static String img2 = "$dynamicAsset/img2.png";
+
+  static String badges1 = "$dynamicAsset/badges1.png";
+  static String badges2 = "$dynamicAsset/badges2.png";
+  static String badges3 = "$dynamicAsset/badges3.png";
 }
