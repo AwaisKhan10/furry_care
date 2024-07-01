@@ -2,18 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:furry_care/core/constants/app_assets.dart';
 import 'package:furry_care/core/constants/colors.dart';
 import 'package:furry_care/core/constants/text_style.dart';
-import 'package:furry_care/core/model/event_model.dart';
+import 'package:furry_care/core/model/volunteer_model.dart';
 import 'package:furry_care/core/other/screen_utils.dart';
 import 'package:intl/intl.dart';
 
-class EventCard extends StatelessWidget {
-  final Event event;
-
-  const EventCard({super.key, required this.event});
+class VolunteerCard extends StatelessWidget {
+  final Volunteer volunteer;
+  const VolunteerCard({super.key, required this.volunteer});
 
   @override
   Widget build(BuildContext context) {
-    String formattedDate = DateFormat('MM/dd/yyyy').format(event.time);
+    String formattedDate = DateFormat('MM/dd/yyyy').format(volunteer.time);
 
     return Container(
       padding: const EdgeInsets.fromLTRB(8, 0, 15, 16),
@@ -30,13 +29,13 @@ class EventCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    event.title,
+                    volunteer.title,
                     style: style14,
                   ),
                   SizedBox(
                     height: 10.h,
                   ),
-                  Text(event.address),
+                  Text(volunteer.address),
                   SizedBox(
                     height: 12.h,
                   ),
@@ -87,7 +86,7 @@ class EventCard extends StatelessWidget {
               children: [
                 Image.asset(AppAssets.bookmark),
                 SizedBox(height: 30.h),
-                Image.asset(event.imgurl),
+                Image.asset(volunteer.imgurl),
                 SizedBox(height: 7.h),
                 Container(
                   height: 30,
@@ -104,7 +103,7 @@ class EventCard extends StatelessWidget {
                   child: GestureDetector(
                     child: Center(
                       child: Text(
-                        'Catch up',
+                        'Apply',
                         style: style14,
                       ),
                     ),

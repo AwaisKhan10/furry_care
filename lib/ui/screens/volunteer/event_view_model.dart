@@ -1,39 +1,40 @@
 import 'package:furry_care/core/constants/app_assets.dart';
-import 'package:furry_care/core/model/volunteer_model.dart';
 import 'package:furry_care/core/view_model/base_view_model.dart';
 
-class VolunteerViewModel extends BaseViewModel {
-  List<Volunteer> _volunteer = [];
+import '../../../core/model/event_model.dart';
 
-  List<Volunteer> get volunteer => _volunteer;
+class EventViewModel extends BaseViewModel {
+  List<Event> _events = [];
 
-  VolunteerViewModel() {
-    fetchVolunteer();
+  List<Event> get events => _events;
+
+  EventViewModel() {
+    fetchEvents();
   }
 
-  void fetchVolunteer() {
-    _volunteer = [
-      Volunteer(
+  void fetchEvents() {
+    _events = [
+      Event(
           'Dog park meet up',
           'Plot No. 176 ,Shop 3, Lakshmi Darshan, Sector 21, Kamothe,Khandeshhwar, Panel',
           AppAssets.img3,
           DateTime.now()),
-      Volunteer(
+      Event(
           'Dog park meet up',
           'Plot No. 176 ,Shop 3, Lakshmi Darshan, Sector 21, Kamothe,Khandeshhwar, Panel',
           AppAssets.img3,
           DateTime.now()),
-      Volunteer(
+      Event(
           'Dog park meet up',
           'Plot No. 176 ,Shop 3, Lakshmi Darshan, Sector 21, Kamothe,Khandeshhwar, Panel',
           AppAssets.img3,
           DateTime.now()),
-      Volunteer(
+      Event(
           'Dog park meet up',
           'Plot No. 176 ,Shop 3, Lakshmi Darshan, Sector 21, Kamothe,Khandeshhwar, Panel',
           AppAssets.img3,
           DateTime.now()),
-      Volunteer(
+      Event(
           'Dog park meet up',
           'Plot No. 176 ,Shop 3, Lakshmi Darshan, Sector 21, Kamothe,Khandeshhwar, Panel',
           AppAssets.img3,

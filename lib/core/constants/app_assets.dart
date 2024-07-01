@@ -75,6 +75,7 @@ class AppAssets {
   static String img1 = "$dynamicAsset/img1.png";
   static String img2 = "$dynamicAsset/img2.png";
   static String img3 = "$dynamicAsset/pet_meetup.png";
+  static String img4 = "$dynamicAsset/parrot.png";
 
   static String badges1 = "$dynamicAsset/badges1.png";
   static String badges2 = "$dynamicAsset/badges2.png";
