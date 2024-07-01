@@ -38,6 +38,12 @@ class AppAssets {
   static String volunteer1 = "$iconsAssets/volunteer1.png";
   static String menu_icon = "$iconsAssets/menu_icon.png";
   static String add = "$iconsAssets/add.png";
+  static String following = "$iconsAssets/following.png";
+  static String share2 = "$iconsAssets/share2.png";
+  static String bookmark = "$iconsAssets/bookmark.png";
+  static String calender = "$iconsAssets/calender.png";
+
+  static String time = "$iconsAssets/time.png";
 
   ///
   /// Home Screen
@@ -68,6 +74,7 @@ class AppAssets {
   static String user2 = "$dynamicAsset/user2.png";
   static String img1 = "$dynamicAsset/img1.png";
   static String img2 = "$dynamicAsset/img2.png";
+  static String img3 = "$dynamicAsset/pet_meetup.png";
 
   static String badges1 = "$dynamicAsset/badges1.png";
   static String badges2 = "$dynamicAsset/badges2.png";

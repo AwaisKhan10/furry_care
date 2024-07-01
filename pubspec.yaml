@@ -53,6 +53,7 @@ dependencies:
   image_picker:
   file_picker:
   shimmer:
+  intl: ^0.19.0
   # device_info: ^2.0.2
   # logger: ^1.0.0
   # rxdart: ^0.27.1
