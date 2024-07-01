@@ -1,4 +1,4 @@
-// ignore_for_file: constant_identifier_names
+// ignore_for_file: constant_identifier_names, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 
@@ -14,6 +14,8 @@ const Color borderColor = Color(0xFF56423D);
 const Color buttonColor = borderColor;
 const Color rootColor = borderColor;
 const Color homescreenBoxColor = textFieldFillColor;
+
+
 
 const Gradient gradientColor = LinearGradient(
     begin: Alignment.topCenter,
