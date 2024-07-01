@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:furry_care/core/constants/app_assets.dart';
 import 'package:furry_care/core/constants/colors.dart';
-import 'package:furry_care/ui/screens/welcome_screen.dart';
+import 'package:furry_care/ui/screens/root/root_screen.dart';
 import 'package:get/get.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -16,7 +16,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   init() async {
     await Future.delayed(const Duration(seconds: 2));
-    Get.offAll(() => WelcomeScreen());
+    Get.offAll(() => RootScreen());
   }
 
   @override

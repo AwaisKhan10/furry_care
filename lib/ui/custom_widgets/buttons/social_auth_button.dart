@@ -7,7 +7,7 @@ import 'package:furry_care/ui/custom_widgets/image_container.dart';
 class SocialAuthButton extends StatelessWidget {
   final String? image;
   final onTap;
-  const SocialAuthButton({Key? key, this.image, this.onTap}) : super(key: key);
+  const SocialAuthButton({super.key, this.image, this.onTap});
 
   @override
   Widget build(BuildContext context) {

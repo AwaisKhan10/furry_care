@@ -60,7 +60,7 @@ class CustomUsersData extends StatelessWidget {
           /// Center Image for the center of the Container
           ///
           Container(
-            margin: EdgeInsets.symmetric(vertical: 16),
+            margin: const EdgeInsets.symmetric(vertical: 16),
             height: 213.h,
             decoration: BoxDecoration(
                 image: DecorationImage(

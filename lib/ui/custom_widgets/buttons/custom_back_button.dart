@@ -6,15 +6,15 @@ import 'package:furry_care/core/other/screen_utils.dart';
 
 class CustomBackButton extends StatelessWidget {
   VoidCallback? onPressed;
-  CustomBackButton({this.onPressed});
+  CustomBackButton({super.key, this.onPressed});
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
       onTap: onPressed,
       child: Container(
-        margin: EdgeInsets.only(left: 14, top: 8),
-        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+        margin: const EdgeInsets.only(left: 14, top: 8),
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
         // height: 30.h,
         // width: 30.w,
         alignment: Alignment.center,
