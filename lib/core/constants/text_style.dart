@@ -32,3 +32,8 @@ TextStyle style10 = TextStyle(
     fontFamily: poppins,
     color: blackColor,
     fontWeight: FontWeight.w400);
+TextStyle style23 = TextStyle(
+    fontSize: 23.sp,
+    fontFamily: poppins,
+    color: blackColor,
+    fontWeight: FontWeight.w600);
